@@ -48,10 +48,19 @@ export default function Footer() {
               <li className="mb-3">
                 <a href="#pricing" className="text-sm text-white/70 hover:text-accent transition-colors">Pricing</a>
               </li>
-              <li className="mb-3">
-                <a href="#contact" className="text-sm text-white/70 hover:text-accent transition-colors">Contact</a>
+              <li className="mb-3 mt-4 text-sm text-white/50 font-semibold uppercase">
+                Contact Us
               </li>
-            </ul>
+              <li className="mb-2">
+                <a href="tel:+918374424565" className="text-sm text-white/70 hover:text-accent transition-colors">
+                  +91 83744 24565
+                </a>
+              </li>
+              <li className="mb-3">
+                <a href="mailto:buildversesolutins@gmail.com" className="text-sm text-white/70 hover:text-accent transition-colors break-all">
+                  buildversesolutins@gmail.com
+                </a>
+              </li>            </ul>
           </div>
         </div>
 

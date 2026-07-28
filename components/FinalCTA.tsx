@@ -39,6 +39,17 @@ export default function FinalCTA() {
               Get a Free Quote
             </button>
           </form>
+          
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-white/90 text-sm font-medium">
+            <a href="tel:+918374424565" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Phone className="w-4 h-4" />
+              <span>+91 83744 24565</span>
+            </a>
+            <a href="mailto:buildversesolutins@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>buildversesolutins@gmail.com</span>
+            </a>
+          </div>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-white/70 text-sm">
             <div className="flex items-center gap-2">
