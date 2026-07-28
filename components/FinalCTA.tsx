@@ -5,12 +5,37 @@ import { Phone, Unlock, Eye } from 'lucide-react';
 
 export default function FinalCTA() {
   const [contactInfo, setContactInfo] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted contact info:', contactInfo);
-    setContactInfo('');
-    alert('Thank you! We will get in touch shortly.');
+    if (!contactInfo) return;
+
+    // Check if it's an email (contains @)
+    if (contactInfo.includes('@')) {
+      setStatus('loading');
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contactInfo }),
+        });
+        if (response.ok) {
+          setStatus('success');
+          setContactInfo('');
+        } else {
+          setStatus('error');
+        }
+      } catch (error) {
+        setStatus('error');
+      }
+    } else {
+      // It's a phone number, redirect to WhatsApp
+      const defaultMessage = encodeURIComponent("Hi BuildVerse, I'd like a free quote for my business!");
+      window.open(`https://wa.me/918374424565?text=${defaultMessage}`, '_blank');
+      setContactInfo('');
+      setStatus('success');
+    }
   };
 
   return (
@@ -26,19 +51,35 @@ export default function FinalCTA() {
             <input
               type="text"
               value={contactInfo}
-              onChange={(e) => setContactInfo(e.target.value)}
+              onChange={(e) => {
+                setContactInfo(e.target.value);
+                if (status !== 'idle') setStatus('idle');
+              }}
               placeholder="Enter your phone or email"
               required
-              className="flex-1 rounded-full px-6 py-4 text-primary bg-white border-0 placeholder:text-muted focus:ring-2 focus:ring-accent outline-none text-base shadow-inner"
+              disabled={status === 'loading' || status === 'success'}
+              className="flex-1 rounded-full px-6 py-4 text-primary bg-white border-0 placeholder:text-muted focus:ring-2 focus:ring-accent outline-none text-base shadow-inner disabled:opacity-70"
             />
             <button
               type="submit"
               id="final-cta-submit"
-              className="rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-8 py-4 text-lg hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
+              disabled={status === 'loading' || status === 'success'}
+              className="rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-8 py-4 text-lg hover:scale-[1.02] hover:shadow-lg transition-all duration-200 disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none min-w-[200px]"
             >
-              Get a Free Quote
+              {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Get a Free Quote'}
             </button>
           </form>
+
+          {status === 'success' && (
+            <p className="mt-4 text-sm text-green-300 font-medium">
+              Thank you! Check your inbox or WhatsApp.
+            </p>
+          )}
+          {status === 'error' && (
+            <p className="mt-4 text-sm text-red-300 font-medium">
+              Something went wrong. Please try again or use the links below.
+            </p>
+          )}
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-white/90 text-sm font-medium">
             <a href="tel:+918374424565" className="flex items-center gap-2 hover:text-accent transition-colors">
