@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  
   try {
     const { contactInfo } = await request.json();
 
@@ -14,11 +12,19 @@ export async function POST(request: Request) {
       );
     }
 
+    // Configure Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
+
     // Send the email
-    const data = await resend.emails.send({
-      from: 'BuildVerse Solutions <onboarding@resend.dev>', // Resend requires this until you verify a custom domain
-      replyTo: 'buildversesolutins@gmail.com', // When users hit reply, it goes here
-      to: [contactInfo],
+    const info = await transporter.sendMail({
+      from: `"BuildVerse Solutions" <${process.env.GMAIL_USER}>`,
+      to: contactInfo,
       subject: 'Welcome to BuildVerse Solutions - Your Free Quote',
       html: `
         <div style="font-family: sans-serif; max-w: 600px; margin: 0 auto; color: #333;">
@@ -49,7 +55,7 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true, data });
+    return NextResponse.json({ success: true, messageId: info.messageId });
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
