@@ -55,6 +55,20 @@ export async function POST(request: Request) {
       `,
     });
 
+    // Send the internal notification email to BuildVerse
+    await transporter.sendMail({
+      from: `"BuildVerse Website" <${process.env.GMAIL_USER}>`,
+      to: process.env.GMAIL_USER, // Send to yourself
+      subject: `🚨 NEW LEAD: ${contactInfo}`,
+      html: `
+        <div style="font-family: sans-serif; color: #333;">
+          <h2 style="color: #0F172A;">New Lead from BuildVerse Website</h2>
+          <p><strong>Contact Email:</strong> ${contactInfo}</p>
+          <p>Please reach out to them as soon as possible.</p>
+        </div>
+      `,
+    });
+
     return NextResponse.json({ success: true, messageId: info.messageId });
   } catch (error) {
     console.error('Error sending email:', error);

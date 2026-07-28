@@ -95,10 +95,10 @@ export default function Pricing() {
 
             {/* Card 3 - Google/Meta Ads */}
             <div className="bg-white rounded-2xl p-8 border border-border shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-primary font-sora">Google / Meta Ads</h3>
+              <h3 className="text-xl font-bold text-primary font-sora">Google & Meta Ads</h3>
               <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">SETUP FEE (ONE-TIME)</p>
-              <div className="text-3xl font-extrabold text-primary font-sora">₹2k–₹5k</div>
-              <p className="text-sm font-semibold text-primary mt-2 mb-1">+ ₹3k–₹15k/month</p>
+              <div className="text-3xl font-extrabold text-primary font-sora">₹2,000–₹5,000</div>
+              <p className="text-sm font-semibold text-primary mt-2 mb-1">+ ₹3,000–₹15,000/month</p>
               <p className="text-sm text-muted italic mb-6">Management fee. Ad budget is paid separately to Google/Meta.</p>
               
               <div className="border-t border-border my-2"></div>

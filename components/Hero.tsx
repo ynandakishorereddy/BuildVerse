@@ -8,7 +8,7 @@ export default function Hero() {
           
           <div>
             <p className="text-sm tracking-[0.2em] text-link-blue font-medium uppercase mb-6">
-              WEBSITES · GOOGLE MAPS · META ADS FOR LOCAL BUSINESSES
+              WEBSITES · GOOGLE MAPS · GOOGLE & META ADS FOR LOCAL BUSINESSES
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight">
               <span className="block">Get found.</span>
@@ -16,7 +16,7 @@ export default function Hero() {
               <span className="block text-link-blue">Get customers.</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted max-w-lg mt-6 mb-8 leading-relaxed">
-              We build your website, get you ranking on Google Maps, and run Meta Ads that bring in real customers — all managed by one team.
+              We build your website, get you ranking on Google Maps, and run Google & Meta Ads that bring in real customers — all managed by one team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -58,7 +58,7 @@ export default function Hero() {
               <div className="absolute bottom-8 -left-4 lg:-left-8 bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-accent"></div>
                 <div>
-                  <div className="text-xs text-muted">Meta Ads</div>
+                  <div className="text-xs text-muted">Google & Meta Ads</div>
                   <div className="text-sm font-bold text-primary">New enquiries</div>
                 </div>
                 <TrendingUp className="w-4 h-4 text-accent" />

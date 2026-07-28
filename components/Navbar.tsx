@@ -32,10 +32,11 @@ export default function Navbar() {
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
-            <a id="nav-link-home" href="#" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Home</a>
-            <a id="nav-link-services" href="#services" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Services</a>
-            <a id="nav-link-pricing" href="#pricing" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Pricing</a>
-            <a id="nav-link-contact" href="#contact" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Contact</a>
+            <a href="#" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Home</a>
+            <a href="#services" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Services</a>
+            <a href="#work" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Work</a>
+            <a href="#pricing" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Pricing</a>
+            <a href="#contact" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Contact</a>
           </nav>
 
           <div className="hidden md:block">

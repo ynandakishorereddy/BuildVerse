@@ -24,13 +24,13 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4 font-sora">Services</h4>
             <ul className="flex flex-col">
               <li className="mb-3">
-                <a href="#pricing" className="text-sm text-white/70 hover:text-accent transition-colors">Website Development</a>
+                <a href="#services" className="text-sm text-white/70 hover:text-accent transition-colors">Website Development</a>
               </li>
               <li className="mb-3">
-                <a href="#pricing" className="text-sm text-white/70 hover:text-accent transition-colors">Google Maps Setup</a>
+                <a href="#services" className="text-sm text-white/70 hover:text-accent transition-colors">Google Maps Setup</a>
               </li>
               <li className="mb-3">
-                <a href="#pricing" className="text-sm text-white/70 hover:text-accent transition-colors">Meta Ads Management</a>
+                <a href="#services" className="text-sm text-white/70 hover:text-accent transition-colors">Meta Ads Management</a>
               </li>
             </ul>
           </div>

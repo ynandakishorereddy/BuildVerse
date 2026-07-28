@@ -56,6 +56,7 @@ export default function FinalCTA() {
                 if (status !== 'idle') setStatus('idle');
               }}
               placeholder="Enter your phone or email"
+              aria-label="Enter your phone or email"
               required
               disabled={status === 'loading' || status === 'success'}
               className="flex-1 rounded-full px-6 py-4 text-primary bg-white border-0 placeholder:text-muted focus:ring-2 focus:ring-accent outline-none text-base shadow-inner disabled:opacity-70"

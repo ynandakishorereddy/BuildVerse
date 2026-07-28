@@ -6,6 +6,7 @@ import Pricing from "@/components/Pricing";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
 import FinalCTA from "@/components/FinalCTA";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
 
 /**
@@ -25,6 +26,7 @@ export default function Home() {
         <Pricing />
         <WhyChooseUs />
         <Process />
+        <About />
         <FinalCTA />
       </main>
       <Footer />

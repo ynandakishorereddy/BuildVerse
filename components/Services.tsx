@@ -59,7 +59,7 @@ export default function Services() {
                 <Megaphone className="w-6 h-6 text-white" />
               </div>
               <div className="flex items-center gap-2">
-                <h3 className="text-xl font-bold text-primary">Meta Ads Management</h3>
+                <h3 className="text-xl font-bold text-primary">Google & Meta Ads</h3>
                 <BarChart3 className="w-4 h-4 text-accent" />
               </div>
               <p className="text-muted mt-3">
