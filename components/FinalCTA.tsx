@@ -11,7 +11,6 @@ export default function FinalCTA() {
     e.preventDefault();
     if (!contactInfo) return;
 
-    // Check if it's an email (contains @)
     if (contactInfo.includes('@')) {
       setStatus('loading');
       try {
@@ -23,11 +22,14 @@ export default function FinalCTA() {
         if (response.ok) {
           setStatus('success');
           setContactInfo('');
+          setTimeout(() => setStatus('idle'), 3000);
         } else {
           setStatus('error');
+          setTimeout(() => setStatus('idle'), 3000);
         }
       } catch {
         setStatus('error');
+        setTimeout(() => setStatus('idle'), 3000);
       }
     } else {
       // It's a phone number, redirect to WhatsApp
@@ -35,6 +37,7 @@ export default function FinalCTA() {
       window.open(`https://wa.me/918374424565?text=${defaultMessage}`, '_blank');
       setContactInfo('');
       setStatus('success');
+      setTimeout(() => setStatus('idle'), 3000);
     }
   };
 
