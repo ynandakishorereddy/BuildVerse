@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     // Send the email
     const data = await resend.emails.send({
       from: 'BuildVerse Solutions <onboarding@resend.dev>', // Resend requires this until you verify a custom domain
-      reply_to: 'buildversesolutins@gmail.com', // When users hit reply, it goes here
+      replyTo: 'buildversesolutins@gmail.com', // When users hit reply, it goes here
       to: [contactInfo],
       subject: 'Welcome to BuildVerse Solutions - Your Free Quote',
       html: `
