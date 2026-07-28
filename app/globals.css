@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+/* ===== BuildVerse Design Tokens ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #F7F8FA;
+  --color-primary: #0F172A;
+  --color-accent: #F5A623;
+  --color-accent-hover: #DC921A;
+  --color-link-blue: #3B5FE0;
+  --color-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-card: #FFFFFF;
 }
 
+/* Register design tokens with Tailwind v4 */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--color-background);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-link-blue: var(--color-link-blue);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-card: var(--color-card);
+  --font-sora: var(--font-sora);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ===== Base Styles ===== */
+body {
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-sora), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Scroll-triggered fade-in animation ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Stagger delays for children */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+
+/* ===== Focus styles for accessibility ===== */
+*:focus-visible {
+  outline: 2px solid var(--color-link-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== Selection color ===== */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
