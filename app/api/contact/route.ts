@@ -44,7 +44,7 @@ export async function POST(request: Request) {
           <p><strong>To get your pricing, please contact us directly:</strong></p>
           <ul>
             <li><strong>Phone / WhatsApp:</strong> <a href="tel:+918374424565" style="color: #3B5FE0; text-decoration: none; font-weight: bold;">+91 83744 24565</a></li>
-            <li><strong>Email:</strong> <a href="mailto:buildversesolutins@gmail.com" style="color: #3B5FE0; text-decoration: none; font-weight: bold;">buildversesolutins@gmail.com</a></li>
+            <li><strong>Email:</strong> <a href="mailto:buildversesolutions@gmail.com" style="color: #3B5FE0; text-decoration: none; font-weight: bold;">buildversesolutions@gmail.com</a></li>
           </ul>
           <p>Or simply reply directly to this email!</p>
           

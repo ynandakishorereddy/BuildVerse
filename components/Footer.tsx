@@ -57,8 +57,8 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-3">
-                <a href="mailto:buildversesolutins@gmail.com" className="text-sm text-white/70 hover:text-accent transition-colors break-all">
-                  buildversesolutins@gmail.com
+                <a href="mailto:buildversesolutions@gmail.com" className="text-sm text-white/70 hover:text-accent transition-colors break-all">
+                  buildversesolutions@gmail.com
                 </a>
               </li>            </ul>
           </div>
