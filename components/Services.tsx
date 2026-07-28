@@ -50,7 +50,7 @@ export default function Services() {
                 <BarChart3 className="w-4 h-4 text-accent" />
               </div>
               <p className="text-muted mt-3">
-                Get found when locals search "near me."
+                Get found when locals search &quot;near me.&quot;
               </p>
             </div>
 

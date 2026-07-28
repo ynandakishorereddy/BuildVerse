@@ -26,7 +26,7 @@ export default function FinalCTA() {
         } else {
           setStatus('error');
         }
-      } catch (error) {
+      } catch {
         setStatus('error');
       }
     } else {
@@ -44,7 +44,7 @@ export default function FinalCTA() {
         <div className="bg-gradient-to-br from-primary to-link-blue rounded-3xl p-8 lg:p-16 text-center shadow-xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 font-sora">Ready to get more customers?</h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10">
-            Tell us about your business and we'll put together a clear, no-pressure quote — free of charge.
+            Tell us about your business and we&apos;ll put together a clear, no-pressure quote — free of charge.
           </p>
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">

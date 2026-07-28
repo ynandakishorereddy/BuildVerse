@@ -22,7 +22,7 @@ export default function SampleWork() {
             See the quality of our work.
           </h2>
           <p className="text-lg text-muted max-w-3xl mb-14">
-            We're a new agency, so these are concept and demo layouts we've designed — not real client results. They show the standard you can expect.
+            We&apos;re a new agency, so these are concept and demo layouts we&apos;ve designed — not real client results. They show the standard you can expect.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

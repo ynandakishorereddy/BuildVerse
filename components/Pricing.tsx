@@ -9,12 +9,12 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref as any} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div ref={ref} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-4 font-sora">
             Simple, transparent pricing.
           </h2>
           <p className="text-lg text-muted text-center max-w-2xl mx-auto mb-14">
-            No hidden fees. No vague quotes. Here's exactly what you pay.
+            No hidden fees. No vague quotes. Here&apos;s exactly what you pay.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">

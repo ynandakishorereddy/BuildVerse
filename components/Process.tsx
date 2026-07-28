@@ -31,7 +31,7 @@ export default function Process() {
   return (
     <section id="process" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref as any} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div ref={ref} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-14">
             <p className="text-sm tracking-[0.2em] text-link-blue font-medium uppercase mb-3">OUR PROCESS</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-primary font-sora">How it works</h2>
