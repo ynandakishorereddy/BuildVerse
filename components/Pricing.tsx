@@ -21,35 +21,35 @@ export default function Pricing() {
             {/* Card 1 - Website Development */}
             <div className="bg-white rounded-2xl p-8 border border-border shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300">
               <h3 className="text-xl font-bold text-primary font-sora">Website Development</h3>
-              <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">STARTING AT</p>
-              <div className="text-3xl font-extrabold text-primary font-sora">₹8,000–₹25,000</div>
-              <p className="text-sm text-muted mb-1">one-time</p>
-              <p className="text-sm text-muted italic mb-6">Depending on pages & features</p>
+              <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">ONE-TIME SETUP</p>
+              <div className="text-3xl font-extrabold text-primary font-sora">₹1,500–₹10,000</div>
+              <p className="text-sm text-muted mb-1">Based on complexity</p>
+              <p className="text-sm font-semibold text-green-600 mb-6">+ 6 months free maintenance</p>
               
               <div className="border-t border-border my-2"></div>
               
               <ul className="flex-1 space-y-3 mt-4 mb-6">
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">Up to 5 responsive pages</span>
+                  <span className="text-primary text-sm">Responsive modern design</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">Contact form + WhatsApp integration</span>
+                  <span className="text-primary text-sm">Contact form + WhatsApp</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">1 round of revisions</span>
+                  <span className="text-primary text-sm">6 months full support</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">Delivered in 7–10 days</span>
+                  <span className="text-primary text-sm">Free minor updates</span>
                 </li>
               </ul>
               
               <div className="mt-auto pt-6">
                 <a id="pricing-cta-website" href="#contact" className="block text-center rounded-full border-2 border-primary text-primary font-semibold px-6 py-3 hover:bg-primary hover:text-white transition-all duration-200">
-                  Get a Quote
+                  Grow My Business
                 </a>
               </div>
             </div>
@@ -60,11 +60,10 @@ export default function Pricing() {
                 MOST POPULAR
               </div>
               <h3 className="text-xl font-bold text-primary font-sora">Google Maps Setup</h3>
-              <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">STARTING AT</p>
-              <div className="text-3xl font-extrabold text-primary font-sora">₹3,000</div>
-              <p className="text-sm text-muted">one-time</p>
-              <p className="text-sm font-semibold text-primary mb-1">+ ₹1,500–3,000/mo</p>
-              <p className="text-sm text-muted italic mb-6">Monthly for ongoing optimization</p>
+              <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">ONE-TIME SETUP</p>
+              <div className="text-3xl font-extrabold text-primary font-sora">₹1,000</div>
+              <p className="text-sm font-semibold text-green-600 mt-1 mb-1">+ 3 months free support</p>
+              <p className="text-sm text-muted italic mb-6">Monthly maintenance extra after 3 months</p>
               
               <div className="border-t border-border my-2"></div>
               
@@ -83,24 +82,24 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">Monthly check-in</span>
+                  <span className="text-primary text-sm">3 months maintenance included</span>
                 </li>
               </ul>
               
               <div className="mt-auto pt-6">
                 <a id="pricing-cta-maps" href="#contact" className="block text-center rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-6 py-3 hover:scale-[1.02] hover:shadow-lg transition-all duration-200">
-                  Get a Quote
+                  Grow My Business
                 </a>
               </div>
             </div>
 
-            {/* Card 3 - Meta Ads Management */}
+            {/* Card 3 - Google/Meta Ads */}
             <div className="bg-white rounded-2xl p-8 border border-border shadow-sm flex flex-col hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-primary font-sora">Meta Ads Management</h3>
-              <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">STARTING AT</p>
-              <div className="text-3xl font-extrabold text-primary font-sora">₹4,000–8,000</div>
-              <p className="text-sm text-muted mb-1">/month</p>
-              <p className="text-sm text-muted italic mb-6">Ad spend paid directly to Meta, separate from this fee</p>
+              <h3 className="text-xl font-bold text-primary font-sora">Google / Meta Ads</h3>
+              <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">SETUP FEE (ONE-TIME)</p>
+              <div className="text-3xl font-extrabold text-primary font-sora">₹2k–₹5k</div>
+              <p className="text-sm font-semibold text-primary mt-2 mb-1">+ ₹3k–₹15k/month</p>
+              <p className="text-sm text-muted italic mb-6">Management fee. Ad budget is paid separately to Google/Meta.</p>
               
               <div className="border-t border-border my-2"></div>
               
@@ -111,7 +110,7 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">2–3 ad creative variations</span>
+                  <span className="text-primary text-sm">Ad creative & copy variations</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -119,13 +118,13 @@ export default function Pricing() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                  <span className="text-primary text-sm">You control the budget</span>
+                  <span className="text-primary text-sm">You control the daily budget</span>
                 </li>
               </ul>
               
               <div className="mt-auto pt-6">
                 <a id="pricing-cta-ads" href="#contact" className="block text-center rounded-full border-2 border-primary text-primary font-semibold px-6 py-3 hover:bg-primary hover:text-white transition-all duration-200">
-                  Get a Quote
+                  Grow My Business
                 </a>
               </div>
             </div>

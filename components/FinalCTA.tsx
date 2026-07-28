@@ -66,7 +66,7 @@ export default function FinalCTA() {
               disabled={status === 'loading' || status === 'success'}
               className="rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-8 py-4 text-lg hover:scale-[1.02] hover:shadow-lg transition-all duration-200 disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none min-w-[200px]"
             >
-              {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Get a Free Quote'}
+              {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Grow My Business'}
             </button>
           </form>
 
