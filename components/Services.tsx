@@ -28,7 +28,7 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div className="bg-background rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-border group">
+            <div className={`bg-background rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border group ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}>
               <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
                 <Globe className="w-6 h-6 text-white" />
               </div>
@@ -41,7 +41,7 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="bg-background rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-border group">
+            <div className={`bg-background rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border group ${isInView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
               <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
@@ -54,7 +54,7 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="bg-background rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-border group">
+            <div className={`bg-background rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border group ${isInView ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}`}>
               <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
                 <Megaphone className="w-6 h-6 text-white" />
               </div>

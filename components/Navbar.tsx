@@ -82,6 +82,14 @@ export default function Navbar() {
               Services
             </a>
             <a
+              id="mobile-nav-link-work"
+              href="#work"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-sm font-medium text-primary hover:text-link-blue transition-colors"
+            >
+              Work
+            </a>
+            <a
               id="mobile-nav-link-pricing"
               href="#pricing"
               onClick={() => setIsMobileMenuOpen(false)}

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useInView } from '@/hooks/useInView';
 import { Target, Heart, TrendingUp } from 'lucide-react';
 
@@ -19,10 +20,10 @@ export default function About() {
                 We exist to help local businesses thrive online.
               </h2>
               <p className="text-lg text-muted mb-6 leading-relaxed">
-                Most web agencies overcharge and underdeliver. They build a pretty website and then disappear. But a website alone doesn't bring customers—visibility does.
+                Most web agencies overcharge and underdeliver. They build a pretty website and then disappear. But a website alone doesn&apos;t bring customers—visibility does.
               </p>
               <p className="text-lg text-muted mb-8 leading-relaxed">
-                That's why we started BuildVerse Solutions. We don't just build sites; we build <strong>growth systems</strong>. Whether you run a bakery, a salon, or a clinic, our goal is simple: get you found on Google Maps, run ads that work, and turn local searches into foot traffic and phone calls.
+                That&apos;s why we started BuildVerse Solutions. We don&apos;t just build sites; we build <strong>growth systems</strong>. Whether you run a bakery, a salon, or a clinic, our goal is simple: get you found on Google Maps, run ads that work, and turn local searches into foot traffic and phone calls.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">
@@ -42,23 +43,29 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="font-bold text-primary text-sm mb-1">ROI Driven</h4>
-                    <p className="text-xs text-muted">We focus on calls & customers.</p>
+                    <p className="text-xs text-muted">We focus on calls &amp; customers.</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Right side: Graphic */}
+            {/* Right side: Generated background image with mission overlay */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-link-blue/20 rounded-3xl transform rotate-3 scale-105"></div>
-              <div className="bg-primary rounded-3xl p-8 relative overflow-hidden flex flex-col justify-center min-h-[400px]">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-link-blue rounded-full mix-blend-multiply filter blur-3xl opacity-30 -mr-20 -mt-20"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-30 -ml-20 -mb-20"></div>
+              <div className="rounded-3xl overflow-hidden relative min-h-[400px]">
+                <Image
+                  src="/images/about-background.jpg"
+                  alt="Digital growth visualization with analytics and network connections"
+                  width={800}
+                  height={450}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/70"></div>
                 
-                <div className="relative z-10 text-center">
+                <div className="relative z-10 flex flex-col justify-center items-center h-full min-h-[400px] p-8">
                   <Target className="w-16 h-16 text-accent mx-auto mb-6" />
                   <h3 className="text-2xl font-bold text-white font-sora mb-4">Our Mission</h3>
-                  <p className="text-white/80 text-lg">
+                  <p className="text-white/80 text-lg text-center max-w-md">
                     To make enterprise-level digital marketing accessible and affordable for everyday local businesses.
                   </p>
                 </div>
