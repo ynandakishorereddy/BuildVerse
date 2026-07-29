@@ -1,14 +1,14 @@
-import { BarChart3 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F172A] border-t border-black/5 text-white py-16">
+    <footer className="bg-[#0F172A] border-t border-black/5 text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">
           {/* Column 1 - Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <BarChart3 className="text-accent w-7 h-7" />
+              <Image src="/images/logo-icon.png" alt="BuildVerse" width={36} height={36} className="w-8 h-8 brightness-0 invert" />
               <div className="flex items-baseline gap-1">
                 <span className="text-xl font-bold font-sora">BuildVerse</span>
                 <span className="text-xs text-white/50 font-sora">Solutions</span>
@@ -51,10 +51,14 @@ export default function Footer() {
               <li className="mb-3">
                 <a href="/blog" className="text-sm text-white/70 hover:text-accent transition-colors">Blog</a>
               </li>
-              <li className="mb-3 mt-4 text-sm text-white/50 font-semibold uppercase">
-                Contact Us
-              </li>
-              <li className="mb-2">
+            </ul>
+          </div>
+
+          {/* Column 4 - Connect */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4 font-sora">Connect</h4>
+            <ul className="flex flex-col">
+              <li className="mb-3">
                 <a href="tel:+918374424565" className="text-sm text-white/70 hover:text-accent transition-colors">
                   +91 83744 24565
                 </a>
@@ -63,15 +67,22 @@ export default function Footer() {
                 <a href="mailto:buildversesolutions@gmail.com" className="text-sm text-white/70 hover:text-accent transition-colors break-all">
                   buildversesolutions@gmail.com
                 </a>
-              </li>            </ul>
+              </li>
+              <li className="mb-3">
+                <a href="https://youtube.com/@buildversesolutions.in" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-[#FF0000] transition-colors">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  YouTube
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/40">
+          <p className="text-xs sm:text-sm text-white/40">
             © 2026 BuildVerse Solutions. All rights reserved.
           </p>
-          <p className="text-sm text-white/40">
+          <p className="text-xs sm:text-sm text-white/40">
             Made with purpose for local businesses.
           </p>
         </div>
