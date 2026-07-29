@@ -2,7 +2,7 @@ import { getPostBySlug, getAllPosts } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
-import { ArrowLeft, Clock, Calendar, Share2, Facebook, Twitter, Linkedin, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Share2, TrendingUp, Link as LinkIcon, Send } from 'lucide-react';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -130,14 +130,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 <Share2 className="w-5 h-5 text-accent" /> Share this article
               </h3>
               <div className="flex items-center gap-3">
-                <button className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-colors text-muted border border-border">
-                  <Twitter className="w-5 h-5" />
+                <button className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-black hover:text-white transition-colors text-muted border border-border font-bold font-sora text-sm">
+                  𝕏
                 </button>
-                <button className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-[#0A66C2] hover:text-white transition-colors text-muted border border-border">
-                  <Linkedin className="w-5 h-5" />
+                <button className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-[#0A66C2] hover:text-white transition-colors text-muted border border-border font-bold font-sora text-sm">
+                  in
                 </button>
-                <button className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors text-muted border border-border">
-                  <Facebook className="w-5 h-5" />
+                <button className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors text-muted border border-border font-bold font-sora text-sm">
+                  f
                 </button>
               </div>
             </div>
