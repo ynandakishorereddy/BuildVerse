@@ -128,7 +128,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div className="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl shadow-sm border border-border border-l-4 border-l-[#FF0000]">
               <h3 className="font-bold text-primary font-sora mb-2 text-lg">Watch & Learn</h3>
               <p className="text-sm text-muted mb-4">Subscribe to our YouTube channel for free tutorials and marketing strategies.</p>
-              <a href="https://youtube.com/@buildversesolutions.in" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-[#FF0000] hover:bg-red-700 text-white font-bold py-3 rounded-xl transition-colors shadow-sm">
+              <a href="https://www.youtube.com/@buildversesolutions.i" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-[#FF0000] hover:bg-red-700 text-white font-bold py-3 rounded-xl transition-colors shadow-sm">
                 Subscribe on YouTube
               </a>
             </div>
