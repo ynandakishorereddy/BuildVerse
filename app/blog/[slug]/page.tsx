@@ -103,7 +103,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </article>
 
           {/* Sidebar (Context from corners) */}
-          <aside className="space-y-8 sticky top-24">
+          <aside className="space-y-8 sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-auto pb-4 pr-2">
             
             {/* Author Profile */}
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-border">
@@ -122,6 +122,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <Link href="/#services" className="text-sm font-bold text-primary hover:text-link-blue flex items-center transition-colors">
                 View our services <ArrowLeft className="w-4 h-4 ml-1 rotate-180" />
               </Link>
+            </div>
+
+            {/* YouTube Subscribe Box */}
+            <div className="bg-white p-6 rounded-3xl shadow-sm border border-border border-l-4 border-l-[#FF0000]">
+              <h3 className="font-bold text-primary font-sora mb-2 text-lg">Watch & Learn</h3>
+              <p className="text-sm text-muted mb-4">Subscribe to our YouTube channel for free tutorials and marketing strategies.</p>
+              <a href="https://youtube.com/@buildversesolutions.in" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full bg-[#FF0000] hover:bg-red-700 text-white font-bold py-3 rounded-xl transition-colors shadow-sm">
+                Subscribe on YouTube
+              </a>
             </div>
 
             {/* Share Article */}
