@@ -1,6 +1,7 @@
 'use client';
 
 import { useInView } from '@/hooks/useInView';
+import { ExternalLink } from 'lucide-react';
 
 export default function SampleWork() {
   const { ref, isInView } = useInView(0.1);
@@ -16,107 +17,112 @@ export default function SampleWork() {
           }`}
         >
           <p className="text-sm tracking-[0.15em] text-link-blue font-medium uppercase mb-3">
-            SAMPLE WEBSITE CONCEPTS
+            OUR PORTFOLIO
           </p>
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-            See the quality of our work.
+            Real projects, real results.
           </h2>
           <p className="text-lg text-muted max-w-3xl mb-14">
-            We&apos;re a new agency, so these are concept and demo layouts we&apos;ve designed — not real client results. They show the standard you can expect.
+            Here are websites we&apos;ve built for real local businesses. Click to visit the live sites and see the quality for yourself.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border">
+            {/* Card 1 - Srirasthu Convention Hall (REAL) */}
+            <a href="https://srivasthu-convention-hall.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:-translate-y-1">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#22C55E]"></div>
                 <div className="ml-3 flex-1 bg-[#334155] rounded-full px-3 py-1 text-xs text-[#94A3B8] truncate">
-                  restaurant-demo.buildverse.in
+                  srivasthu-convention-hall.vercel.app
                 </div>
               </div>
-              <div className="h-1.5 w-full bg-[#EF6C35]"></div>
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#8B1A1A] to-[#D4A853]"></div>
               <div className="p-6">
-                <p className="text-xs tracking-[0.15em] font-medium uppercase mb-3 text-[#EF6C35]">
-                  CONCEPT · RESTAURANT
-                </p>
-                <h3 className="text-xl font-bold text-primary mb-3">Spice Route Kitchen</h3>
-                <div className="h-3 rounded-full bg-gray-200 w-full mb-2"></div>
-                <div className="h-3 rounded-full bg-gray-200 w-3/4 mb-5"></div>
-                <div className="inline-block rounded-full bg-accent px-4 py-2 text-xs font-semibold text-primary mb-5">
-                  View Menu
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs tracking-[0.15em] font-bold uppercase text-[#8B1A1A]">
+                    ✅ LIVE · EVENT VENUE
+                  </p>
+                  <ExternalLink className="w-4 h-4 text-muted group-hover:text-link-blue transition-colors" />
                 </div>
-                <div className="flex gap-3">
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
+                <h3 className="text-xl font-bold text-primary mb-2">Srirasthu A/C Banquet Hall</h3>
+                <p className="text-sm text-muted mb-4">Premium wedding & function hall in Kodad, Telangana. Features gallery, testimonials, FAQ, booking process, and Google Maps integration.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-[#8B1A1A]/10 text-[#8B1A1A] px-2.5 py-1 rounded-full font-medium">Weddings</span>
+                  <span className="text-xs bg-[#D4A853]/20 text-[#8B1A1A] px-2.5 py-1 rounded-full font-medium">Events</span>
+                  <span className="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium">SEO</span>
+                </div>
+                <div className="flex items-center gap-4 text-xs text-muted">
+                  <span>⭐ 4.2 Google Rating</span>
+                  <span>💒 50+ Weddings</span>
                 </div>
               </div>
-              <div className="text-sm text-muted font-medium text-center py-4 border-t border-border/50">
-                Restaurant Website Concept
+              <div className="text-sm text-link-blue font-semibold text-center py-4 border-t border-border/50 group-hover:bg-link-blue/5 transition-colors">
+                Visit Live Site →
               </div>
-            </div>
+            </a>
 
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border">
+            {/* Card 2 - The Empire Unisex Saloon (REAL) */}
+            <a href="https://the-empire-unisex-saloon.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:-translate-y-1">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#22C55E]"></div>
                 <div className="ml-3 flex-1 bg-[#334155] rounded-full px-3 py-1 text-xs text-[#94A3B8] truncate">
-                  clinic-demo.buildverse.in
+                  the-empire-unisex-saloon.vercel.app
                 </div>
               </div>
-              <div className="h-1.5 w-full bg-[#14B8A6]"></div>
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#1a1a2e] to-[#c9a84c]"></div>
               <div className="p-6">
-                <p className="text-xs tracking-[0.15em] font-medium uppercase mb-3 text-[#14B8A6]">
-                  CONCEPT · HEALTHCARE
-                </p>
-                <h3 className="text-xl font-bold text-primary mb-3">CityCare Dental</h3>
-                <div className="h-3 rounded-full bg-gray-200 w-full mb-2"></div>
-                <div className="h-3 rounded-full bg-gray-200 w-3/4 mb-5"></div>
-                <div className="inline-block rounded-full bg-accent px-4 py-2 text-xs font-semibold text-primary mb-5">
-                  Book Now
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs tracking-[0.15em] font-bold uppercase text-[#1a1a2e]">
+                    ✅ LIVE · BEAUTY SALON
+                  </p>
+                  <ExternalLink className="w-4 h-4 text-muted group-hover:text-link-blue transition-colors" />
                 </div>
-                <div className="flex gap-3">
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
+                <h3 className="text-xl font-bold text-primary mb-2">The Empire Unisex Saloon</h3>
+                <p className="text-sm text-muted mb-4">Premium hair & beauty salon in Kodad with 20+ services, bridal makeup showcase, filterable service categories, gallery, and WhatsApp booking.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-[#1a1a2e]/10 text-[#1a1a2e] px-2.5 py-1 rounded-full font-medium">Hair & Beauty</span>
+                  <span className="text-xs bg-[#c9a84c]/20 text-[#1a1a2e] px-2.5 py-1 rounded-full font-medium">Bridal</span>
+                  <span className="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium">SEO</span>
+                </div>
+                <div className="flex items-center gap-4 text-xs text-muted">
+                  <span>⭐ 5.0 Rating</span>
+                  <span>💇 8+ Years Experience</span>
                 </div>
               </div>
-              <div className="text-sm text-muted font-medium text-center py-4 border-t border-border/50">
-                Clinic Website Concept
+              <div className="text-sm text-link-blue font-semibold text-center py-4 border-t border-border/50 group-hover:bg-link-blue/5 transition-colors">
+                Visit Live Site →
               </div>
-            </div>
+            </a>
 
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-border">
+            {/* Card 3 - Concept placeholder */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-border relative">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#22C55E]"></div>
                 <div className="ml-3 flex-1 bg-[#334155] rounded-full px-3 py-1 text-xs text-[#94A3B8] truncate">
-                  retail-demo.buildverse.in
+                  your-business.buildverse.in
                 </div>
               </div>
-              <div className="h-1.5 w-full bg-[#8B5CF6]"></div>
-              <div className="p-6">
-                <p className="text-xs tracking-[0.15em] font-medium uppercase mb-3 text-[#8B5CF6]">
-                  CONCEPT · RETAIL
+              <div className="h-1.5 w-full bg-gradient-to-r from-accent to-link-blue"></div>
+              <div className="p-6 flex flex-col items-center justify-center min-h-[260px] text-center">
+                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-2">Your Business Here?</h3>
+                <p className="text-sm text-muted mb-5 max-w-xs">
+                  We&apos;re building websites for local businesses just like yours. Let&apos;s make your business the next success story.
                 </p>
-                <h3 className="text-xl font-bold text-primary mb-3">Urban Threads Store</h3>
-                <div className="h-3 rounded-full bg-gray-200 w-full mb-2"></div>
-                <div className="h-3 rounded-full bg-gray-200 w-3/4 mb-5"></div>
-                <div className="inline-block rounded-full bg-accent px-4 py-2 text-xs font-semibold text-primary mb-5">
-                  Shop Now
-                </div>
-                <div className="flex gap-3">
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                  <div className="h-16 bg-gray-100 rounded-lg flex-1"></div>
-                </div>
+                <a href="#contact" className="inline-block rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-6 py-2.5 text-sm hover:scale-[1.02] transition-all duration-200">
+                  Get Started
+                </a>
               </div>
               <div className="text-sm text-muted font-medium text-center py-4 border-t border-border/50">
-                Retail Store Concept
+                Your next project
               </div>
             </div>
 
