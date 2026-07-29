@@ -44,7 +44,7 @@ export default function FinalCTA() {
   return (
     <section id="contact" className="py-20 lg:py-28">
       <div className="max-w-7xl mx-4 sm:mx-6 lg:mx-auto">
-        <div className="bg-gradient-to-br from-primary to-link-blue rounded-3xl p-8 lg:p-16 text-center shadow-xl">
+        <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] border border-black/5 rounded-3xl p-8 lg:p-16 text-center shadow-[0_10px_40px_rgba(59,95,224,0.15)]">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 font-sora">Ready to get more customers?</h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10">
             Tell us about your business and we&apos;ll put together a clear, no-pressure quote — free of charge.
@@ -62,15 +62,15 @@ export default function FinalCTA() {
               aria-label="Enter your phone or email"
               required
               disabled={status === 'loading' || status === 'success'}
-              className="flex-1 rounded-full px-6 py-4 text-primary bg-white border-0 placeholder:text-muted focus:ring-2 focus:ring-accent outline-none text-base shadow-inner disabled:opacity-70"
+              className="flex-1 rounded-full px-6 py-4 text-white bg-white/5 border border-white/10 placeholder:text-muted focus:ring-2 focus:ring-accent outline-none text-base shadow-inner disabled:opacity-70"
             />
             <button
               type="submit"
               id="final-cta-submit"
               disabled={status === 'loading' || status === 'success'}
-              className="rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-8 py-4 text-lg hover:scale-[1.02] hover:shadow-lg transition-all duration-200 disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none min-w-[200px]"
+              className="rounded-full bg-accent hover:bg-accent-hover text-black font-semibold px-8 py-4 text-lg hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(245,166,35,0.4)] transition-all duration-200 disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none min-w-[200px]"
             >
-              {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Grow My Business'}
+              {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Start Your Growth'}
             </button>
           </form>
 

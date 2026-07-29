@@ -12,7 +12,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-16 bg-primary relative overflow-hidden">
+    <section className="py-16 bg-background border-y border-black/5 relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-link-blue/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
@@ -51,13 +51,13 @@ function StatCard({
       className="text-center group"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/10 mb-4 group-hover:scale-110 transition-transform duration-300`}>
+      <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-card border border-black/5 shadow-sm mb-4 group-hover:scale-110 transition-transform duration-300`}>
         <Icon className={`w-7 h-7 ${color}`} />
       </div>
-      <div className="text-4xl lg:text-5xl font-extrabold text-white font-sora mb-2">
+      <div className="text-4xl lg:text-5xl font-extrabold text-primary font-sora mb-2">
         {count}{suffix}
       </div>
-      <div className="text-sm text-white/60 font-medium">{label}</div>
+      <div className="text-sm text-muted font-medium">{label}</div>
     </div>
   );
 }

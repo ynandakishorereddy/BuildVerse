@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
               const Icon = reason.icon;
               return (
                 <div key={index} className="text-center p-6 group">
-                  <div className="w-14 h-14 rounded-xl bg-white border border-border flex items-center justify-center mx-auto mb-5 shadow-sm group-hover:shadow-md group-hover:border-link-blue/40 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-card border border-white/5 flex items-center justify-center mx-auto mb-5 shadow-sm group-hover:shadow-md group-hover:border-link-blue/40 group-hover:scale-110 transition-all duration-300">
                     <Icon className="w-6 h-6 text-link-blue" />
                   </div>
                   <h3 className="text-lg font-bold text-primary mb-2 font-sora">{reason.title}</h3>

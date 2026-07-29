@@ -14,7 +14,7 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight">
               <span className="block">Get found.</span>
               <span className="block">Get called.</span>
-              <span className="block text-link-blue">Get customers.</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-link-blue drop-shadow-sm">Get customers.</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted max-w-lg mt-6 mb-8 leading-relaxed">
               We build your website, get you ranking on Google Maps, and run Google &amp; Meta Ads that bring in real customers — all managed by one team.
@@ -23,14 +23,14 @@ export default function Hero() {
               <a
                 href="#contact"
                 id="hero-cta-primary"
-                className="rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-8 py-4 text-lg text-center hover:scale-[1.02] hover:shadow-lg transition-all duration-200 animate-pulse-glow"
+                className="rounded-full bg-accent hover:bg-accent-hover text-black font-semibold px-8 py-4 text-lg text-center hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(245,166,35,0.4)] transition-all duration-200"
               >
-                Get a Free Quote
+                Start Your Growth
               </a>
               <a
                 href="#process"
                 id="hero-cta-secondary"
-                className="rounded-full border-2 border-primary text-primary font-semibold px-8 py-4 text-lg text-center hover:bg-primary hover:text-white hover:scale-[1.02] transition-all duration-200"
+                className="rounded-full border-2 border-primary text-primary font-semibold px-8 py-4 text-lg text-center hover:bg-black/5 hover:scale-[1.02] transition-all duration-200"
               >
                 See Our Process
               </a>
@@ -55,7 +55,7 @@ export default function Hero() {
             </div>
 
             {/* Floating Google Maps card */}
-            <div className="absolute top-4 right-0 lg:-right-4 bg-white rounded-xl shadow-lg p-3 flex items-center gap-3 animate-fade-in-up animate-delay-300">
+            <div className="absolute top-4 right-0 lg:-right-4 bg-white border border-black/5 rounded-xl shadow-2xl shadow-black/10 p-3 flex items-center gap-3 animate-fade-in-up animate-delay-300 backdrop-blur-xl">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
               <div>
                 <div className="text-xs text-muted">Google Maps</div>
@@ -65,7 +65,7 @@ export default function Hero() {
             </div>
 
             {/* Floating Ads card */}
-            <div className="absolute bottom-8 -left-4 lg:-left-8 bg-white rounded-xl shadow-lg p-3 flex items-center gap-3 animate-fade-in-up animate-delay-400">
+            <div className="absolute bottom-8 -left-4 lg:-left-8 bg-white border border-black/5 rounded-xl shadow-2xl shadow-black/10 p-3 flex items-center gap-3 animate-fade-in-up animate-delay-400 backdrop-blur-xl">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
               <div>
                 <div className="text-xs text-muted">Google &amp; Meta Ads</div>

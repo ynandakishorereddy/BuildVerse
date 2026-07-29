@@ -7,7 +7,7 @@ export default function Services() {
   const { ref, isInView } = useInView(0.1);
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-white">
+    <section id="services" className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div
@@ -28,9 +28,9 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div className={`bg-background rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border group ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}>
-              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                <Globe className="w-6 h-6 text-white" />
+            <div className={`bg-card rounded-2xl p-8 hover:shadow-[0_10px_40px_rgba(59,95,224,0.1)] hover:-translate-y-1 transition-all duration-300 border border-black/5 group ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}>
+              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <Globe className="w-6 h-6 text-blue-600" />
               </div>
               <div className="flex items-center gap-2">
                 <h3 className="text-xl font-bold text-primary">Website Development</h3>
@@ -41,9 +41,9 @@ export default function Services() {
               </p>
             </div>
 
-            <div className={`bg-background rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border group ${isInView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
-              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                <MapPin className="w-6 h-6 text-white" />
+            <div className={`bg-card rounded-2xl p-8 hover:shadow-[0_10px_40px_rgba(59,95,224,0.1)] hover:-translate-y-1 transition-all duration-300 border border-black/5 group ${isInView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
+              <div className="w-14 h-14 rounded-xl bg-red-100 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <MapPin className="w-6 h-6 text-red-600" />
               </div>
               <div className="flex items-center gap-2">
                 <h3 className="text-xl font-bold text-primary">Google Maps Setup</h3>
@@ -54,9 +54,9 @@ export default function Services() {
               </p>
             </div>
 
-            <div className={`bg-background rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border group ${isInView ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}`}>
-              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                <Megaphone className="w-6 h-6 text-white" />
+            <div className={`bg-card rounded-2xl p-8 hover:shadow-[0_10px_40px_rgba(59,95,224,0.1)] hover:-translate-y-1 transition-all duration-300 border border-black/5 group ${isInView ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}`}>
+              <div className="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <Megaphone className="w-6 h-6 text-purple-600" />
               </div>
               <div className="flex items-center gap-2">
                 <h3 className="text-xl font-bold text-primary">Google & Meta Ads</h3>

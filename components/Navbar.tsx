@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { BarChart3, Menu, X } from 'lucide-react';
+import { BarChart3, Menu, X, Home, Briefcase, FolderOpen, Tag, MessageSquare } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,8 +17,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white/90 backdrop-blur transition-shadow duration-300 ${
-        isScrolled ? 'shadow-md' : ''
+      className={`sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-black/5 transition-all duration-300 ${
+        isScrolled ? 'shadow-md shadow-black/20' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,20 +32,21 @@ export default function Navbar() {
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Home</a>
-            <a href="#services" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Services</a>
-            <a href="#work" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Work</a>
-            <a href="#pricing" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Pricing</a>
-            <a href="#contact" className="text-sm font-medium text-primary hover:text-link-blue transition-colors">Contact</a>
+            <a href="/" className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"><Home className="w-4 h-4 text-blue-500"/> Home</a>
+            <a href="/#services" className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"><Briefcase className="w-4 h-4 text-orange-500"/> Services</a>
+            <a href="/#work" className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"><FolderOpen className="w-4 h-4 text-purple-500"/> Work</a>
+            <a href="/#pricing" className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"><Tag className="w-4 h-4 text-green-500"/> Pricing</a>
+            <a href="/blog" className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"><MessageSquare className="w-4 h-4 text-indigo-500"/> Blog</a>
+            <a href="/#contact" className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"><MessageSquare className="w-4 h-4 text-red-500"/> Contact</a>
           </nav>
 
           <div className="hidden md:block">
             <a
               id="nav-cta-button"
-              href="#contact"
-              className="inline-block rounded-full bg-accent hover:bg-accent-hover text-primary text-sm font-semibold px-5 py-2.5 hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
+              href="/#contact"
+              className="inline-block rounded-full bg-accent hover:bg-accent-hover text-black text-sm font-semibold px-5 py-2.5 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(245,166,35,0.4)] transition-all duration-200"
             >
-              Get a Free Quote
+              Start Your Growth
             </a>
           </div>
 
@@ -63,55 +64,63 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-white absolute w-full left-0 shadow-lg">
+        <div className="md:hidden border-t border-black/5 bg-card absolute w-full left-0 shadow-xl shadow-black/10">
           <div className="px-4 py-6 space-y-4 flex flex-col">
             <a
               id="mobile-nav-link-home"
-              href="#"
+              href="/"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-medium text-primary hover:text-link-blue transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"
             >
-              Home
+              <Home className="w-4 h-4 text-blue-500"/> Home
             </a>
             <a
               id="mobile-nav-link-services"
-              href="#services"
+              href="/#services"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-medium text-primary hover:text-link-blue transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"
             >
-              Services
+              <Briefcase className="w-4 h-4 text-orange-500"/> Services
             </a>
             <a
               id="mobile-nav-link-work"
-              href="#work"
+              href="/#work"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-medium text-primary hover:text-link-blue transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"
             >
-              Work
+              <FolderOpen className="w-4 h-4 text-purple-500"/> Work
             </a>
             <a
               id="mobile-nav-link-pricing"
-              href="#pricing"
+              href="/#pricing"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-medium text-primary hover:text-link-blue transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"
             >
-              Pricing
+              <Tag className="w-4 h-4 text-green-500"/> Pricing
+            </a>
+            <a
+              id="mobile-nav-link-blog"
+              href="/blog"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"
+            >
+              <MessageSquare className="w-4 h-4 text-indigo-500"/> Blog
             </a>
             <a
               id="mobile-nav-link-contact"
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-medium text-primary hover:text-link-blue transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-primary hover:text-link-blue transition-colors"
             >
-              Contact
+              <MessageSquare className="w-4 h-4 text-red-500"/> Contact
             </a>
             <a
               id="mobile-nav-cta-button"
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="inline-block text-center rounded-full bg-accent hover:bg-accent-hover text-primary text-sm font-semibold px-5 py-3 hover:scale-[1.02] transition-all duration-200 mt-4"
+              className="inline-block text-center rounded-full bg-accent hover:bg-accent-hover text-black text-sm font-semibold px-5 py-3 hover:scale-[1.02] transition-all duration-200 mt-4 shadow-[0_0_15px_rgba(245,166,35,0.4)]"
             >
-              Get a Free Quote
+              Start Your Growth
             </a>
           </div>
         </div>

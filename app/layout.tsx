@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const sora = Sora({
@@ -35,6 +36,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${sora.variable} h-full`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7719752027713335"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body className="min-h-full flex flex-col font-sora antialiased">
         {children}
       </body>

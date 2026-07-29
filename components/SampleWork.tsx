@@ -29,7 +29,7 @@ export default function SampleWork() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             {/* Card 1 - Srirasthu Convention Hall (REAL) */}
-            <a href="https://srivasthu-convention-hall.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:-translate-y-1">
+            <a href="https://srivasthu-convention-hall.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -64,7 +64,7 @@ export default function SampleWork() {
             </a>
 
             {/* Card 2 - The Empire Unisex Saloon (REAL) */}
-            <a href="https://the-empire-unisex-saloon.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:-translate-y-1">
+            <a href="https://the-empire-unisex-saloon.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -99,7 +99,7 @@ export default function SampleWork() {
             </a>
 
             {/* Card 3 - Concept placeholder */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-border relative">
+            <div className="bg-card rounded-2xl overflow-hidden shadow-md border border-black/5 relative hover:shadow-xl transition-shadow">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -117,8 +117,8 @@ export default function SampleWork() {
                 <p className="text-sm text-muted mb-5 max-w-xs">
                   We&apos;re building websites for local businesses just like yours. Let&apos;s make your business the next success story.
                 </p>
-                <a href="#contact" className="inline-block rounded-full bg-accent hover:bg-accent-hover text-primary font-semibold px-6 py-2.5 text-sm hover:scale-[1.02] transition-all duration-200">
-                  Get Started
+                <a href="#contact" className="inline-block rounded-full bg-accent hover:bg-accent-hover text-black font-semibold px-6 py-2.5 text-sm hover:scale-[1.02] transition-all duration-200">
+                  Start Your Growth
                 </a>
               </div>
               <div className="text-sm text-muted font-medium text-center py-4 border-t border-border/50">

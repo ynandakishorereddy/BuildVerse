@@ -8,7 +8,7 @@ export default function About() {
   const { ref, isInView } = useInView(0.1);
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-white border-t border-border">
+    <section id="about" className="py-20 lg:py-28 bg-background border-t border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -60,14 +60,16 @@ export default function About() {
                   height={450}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-primary/70"></div>
+                <div className="absolute inset-0 bg-black/5"></div>
                 
                 <div className="relative z-10 flex flex-col justify-center items-center h-full min-h-[400px] p-8">
-                  <Target className="w-16 h-16 text-accent mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-white font-sora mb-4">Our Mission</h3>
-                  <p className="text-white/80 text-lg text-center max-w-md">
-                    To make enterprise-level digital marketing accessible and affordable for everyday local businesses.
-                  </p>
+                  <div className="bg-white/95 backdrop-blur-md border border-white/50 p-8 rounded-3xl shadow-xl max-w-sm text-center transform hover:scale-105 transition-transform duration-300">
+                    <Target className="w-12 h-12 text-link-blue mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-primary mb-3">Our Mission</h3>
+                    <p className="text-muted text-base">
+                      To make enterprise-level digital marketing accessible and affordable for everyday local businesses.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

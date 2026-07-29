@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ===== BuildVerse Design Tokens ===== */
 :root {
-  --color-background: #F7F8FA;
+  --color-background: #F8FAFC;
   --color-primary: #0F172A;
   --color-accent: #F5A623;
   --color-accent-hover: #DC921A;
@@ -137,3 +138,18 @@ html {
 /* ===== Stagger delays for cards ===== */
 .animate-delay-500 { animation-delay: 500ms; }
 .animate-delay-600 { animation-delay: 600ms; }
+
+/* ===== Slide right for timeline ===== */
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(400%);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 4s linear infinite;
+}
+
