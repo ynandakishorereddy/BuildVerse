@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12">
           {/* Column 1 - Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Image src="/images/logo-icon.png" alt="BuildVerse" width={36} height={36} className="w-8 h-8 brightness-0 invert" />
-              <div className="flex items-baseline gap-1">
-                <span className="text-xl font-bold font-sora">BuildVerse</span>
-                <span className="text-xs text-white/50 font-sora">Solutions</span>
+            <div className="flex items-center gap-3 mb-4">
+              <Image src="/images/logo-icon.png" alt="BuildVerse" width={48} height={48} className="w-10 h-10 sm:w-12 sm:h-12 object-contain brightness-0 invert" />
+              <div className="flex flex-col">
+                <span className="text-xl sm:text-2xl font-extrabold font-sora leading-tight">BuildVerse</span>
+                <span className="text-[11px] sm:text-xs font-semibold text-white/60 font-sora leading-tight tracking-wider uppercase">Solutions</span>
               </div>
             </div>
             <p className="text-sm text-white/60 mt-4 max-w-xs">

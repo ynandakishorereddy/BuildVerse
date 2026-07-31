@@ -24,11 +24,17 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <a href="/" className="flex items-center gap-2">
-            <Image src="/images/logo-icon.png" alt="BuildVerse" width={36} height={36} className="w-8 h-8 sm:w-9 sm:h-9" />
+          <a href="/" className="flex items-center gap-3 group">
+            <Image 
+              src="/images/logo-icon.png" 
+              alt="BuildVerse" 
+              width={52} 
+              height={52} 
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-200" 
+            />
             <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-bold text-primary leading-tight">BuildVerse</span>
-              <span className="text-[10px] sm:text-xs text-muted leading-tight">Solutions</span>
+              <span className="text-xl sm:text-2xl font-extrabold text-primary leading-tight tracking-tight">BuildVerse</span>
+              <span className="text-[11px] sm:text-xs font-semibold text-muted leading-tight tracking-wider uppercase">Solutions</span>
             </div>
           </a>
           
