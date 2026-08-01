@@ -3,8 +3,8 @@ import { Shield, MapPin, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-[90vh] flex items-center bg-background pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
+    <section className="bg-background pt-3 sm:pt-5 pb-12 lg:pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-2 sm:pt-4 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           <div className="animate-fade-in-up">
