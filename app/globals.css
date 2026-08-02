@@ -40,29 +40,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== Scroll-triggered fade-in animation ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
-}
-
-/* Stagger delays for children */
-.animate-delay-100 { animation-delay: 100ms; }
-.animate-delay-200 { animation-delay: 200ms; }
-.animate-delay-300 { animation-delay: 300ms; }
-.animate-delay-400 { animation-delay: 400ms; }
-
 /* ===== Focus styles for accessibility ===== */
 *:focus-visible {
   outline: 2px solid var(--color-link-blue);
@@ -74,20 +51,6 @@ html {
 ::selection {
   background: var(--color-accent);
   color: var(--color-primary);
-}
-
-/* ===== Floating animation for hero image ===== */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
 }
 
 /* ===== Pulse glow for CTA buttons ===== */
@@ -103,53 +66,3 @@ html {
 .animate-pulse-glow {
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
-
-/* ===== Slide-in animations ===== */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.7s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.7s ease-out forwards;
-}
-
-/* ===== Stagger delays for cards ===== */
-.animate-delay-500 { animation-delay: 500ms; }
-.animate-delay-600 { animation-delay: 600ms; }
-
-/* ===== Slide right for timeline ===== */
-@keyframes slideRight {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(400%);
-  }
-}
-
-.animate-slide-right {
-  animation: slideRight 4s linear infinite;
-}
-

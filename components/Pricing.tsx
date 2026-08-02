@@ -1,32 +1,54 @@
 'use client';
 
 import { Check } from 'lucide-react';
-import { useInView } from '@/hooks/useInView';
+import { motion, Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 70, damping: 15 } 
+  }
+};
 
 export default function Pricing() {
-  const { ref, isInView } = useInView(0.1);
-
   return (
     <section id="pricing" className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-4 font-sora">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl lg:text-4xl font-bold text-primary text-center mb-4 font-sora">
             Simple, transparent pricing.
-          </h2>
-          <p className="text-lg text-muted text-center max-w-2xl mx-auto mb-14">
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-lg text-muted text-center max-w-2xl mx-auto mb-14">
             No hidden fees. No vague quotes. Here&apos;s exactly what you pay.
-          </p>
+          </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {/* Card 1 - Website Development */}
-            <div className="bg-card rounded-2xl p-8 border border-black/10 shadow-sm flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <motion.div variants={itemVariants} className="bg-card rounded-2xl p-8 border border-black/10 shadow-sm flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <h3 className="text-xl font-bold text-primary font-sora">Website Development</h3>
               <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">ONE-TIME SETUP</p>
               <div className="text-3xl font-extrabold text-primary font-sora">₹1,500–₹10,000</div>
               <p className="text-sm text-muted mb-1">Based on complexity</p>
               <p className="text-sm font-semibold text-green-600 mb-6">+ 6 months free maintenance</p>
               
-              <div className="border-t border-white/5 my-2"></div>
+              <div className="border-t border-black/5 my-2"></div>
               
               <ul className="flex-1 space-y-3 mt-4 mb-6">
                 <li className="flex items-start gap-3">
@@ -52,10 +74,10 @@ export default function Pricing() {
                   Grow My Business
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 2 - Google Maps Setup */}
-            <div className="bg-[#0F172A] rounded-2xl p-8 border-2 border-accent shadow-[0_10px_40px_rgba(245,166,35,0.2)] flex flex-col relative hover:-translate-y-1 transition-transform duration-300">
+            <motion.div variants={itemVariants} className="bg-[#0F172A] rounded-2xl p-8 border-2 border-accent shadow-[0_10px_40px_rgba(245,166,35,0.2)] flex flex-col relative hover:-translate-y-2 transition-transform duration-300">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-black text-xs font-bold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm whitespace-nowrap">
                 MOST POPULAR
               </div>
@@ -91,17 +113,17 @@ export default function Pricing() {
                   Grow My Business
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 3 - Google/Meta Ads */}
-            <div className="bg-card rounded-2xl p-8 border border-black/10 shadow-sm flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <motion.div variants={itemVariants} className="bg-card rounded-2xl p-8 border border-black/10 shadow-sm flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <h3 className="text-xl font-bold text-primary font-sora">Google & Meta Ads</h3>
               <p className="text-xs tracking-widest text-muted font-medium uppercase mt-5 mb-1">SETUP FEE (ONE-TIME)</p>
               <div className="text-3xl font-extrabold text-primary font-sora">₹2,000–₹5,000</div>
               <p className="text-sm font-semibold text-primary mt-2 mb-1">+ ₹3,000–₹15,000/month</p>
               <p className="text-sm text-muted italic mb-6">Management fee. Ad budget is paid separately to Google/Meta.</p>
               
-              <div className="border-t border-white/5 my-2"></div>
+              <div className="border-t border-black/5 my-2"></div>
               
               <ul className="flex-1 space-y-3 mt-4 mb-6">
                 <li className="flex items-start gap-3">
@@ -127,14 +149,14 @@ export default function Pricing() {
                   Grow My Business
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="mt-14 bg-blue-50 border border-blue-100 rounded-2xl p-6 lg:p-8 text-center">
+          <motion.div variants={itemVariants} className="mt-14 bg-blue-50 border border-blue-100 rounded-2xl p-6 lg:p-8 text-center">
             <h3 className="text-lg font-semibold text-primary font-sora">💰 Save 10–15% when you combine 2+ services.</h3>
             <p className="text-sm text-muted mt-2">Final quote depends on your business size and goals — book a free call for exact pricing.</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

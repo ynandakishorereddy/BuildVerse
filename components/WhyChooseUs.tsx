@@ -1,11 +1,28 @@
 'use client';
 
 import { Eye, Unlock, Users, MapPin } from 'lucide-react';
-import { useInView } from '@/hooks/useInView';
+import { motion, Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 70, damping: 15 } 
+  }
+};
 
 export default function WhyChooseUs() {
-  const { ref, isInView } = useInView(0.1);
-
   const reasons = [
     {
       icon: Eye,
@@ -32,27 +49,32 @@ export default function WhyChooseUs() {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="text-center mb-14">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div variants={itemVariants} className="text-center mb-14">
             <p className="text-sm tracking-[0.2em] text-link-blue font-medium uppercase mb-3">WHY BUILDVERSE</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-primary font-sora">Why choose us?</h2>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-                <div key={index} className="text-center p-6 group">
+                <motion.div variants={itemVariants} key={index} className="text-center p-6 group">
                   <div className="w-14 h-14 rounded-xl bg-card border border-white/5 flex items-center justify-center mx-auto mb-5 shadow-sm group-hover:shadow-md group-hover:border-link-blue/40 group-hover:scale-110 transition-all duration-300">
                     <Icon className="w-6 h-6 text-link-blue" />
                   </div>
                   <h3 className="text-lg font-bold text-primary mb-2 font-sora">{reason.title}</h3>
                   <p className="text-sm text-muted">{reason.description}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

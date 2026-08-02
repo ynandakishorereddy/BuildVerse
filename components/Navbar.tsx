@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Home, Briefcase, FolderOpen, Tag, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -91,44 +92,52 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Drawer Navigation (< 1024px) */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-black/5 bg-card absolute w-full left-0 shadow-xl shadow-black/10 z-50">
-          <div className="px-4 py-4 space-y-1 flex flex-col max-w-7xl mx-auto">
-            <a id="mobile-nav-link-home" href="/" onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
-              <Home className="w-4 h-4 text-blue-500"/> Home
-            </a>
-            <a id="mobile-nav-link-services" href="/#services" onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
-              <Briefcase className="w-4 h-4 text-orange-500"/> Services
-            </a>
-            <a id="mobile-nav-link-work" href="/#work" onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
-              <FolderOpen className="w-4 h-4 text-purple-500"/> Work
-            </a>
-            <a id="mobile-nav-link-pricing" href="/#pricing" onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
-              <Tag className="w-4 h-4 text-green-500"/> Pricing
-            </a>
-            <a id="mobile-nav-link-blog" href="/blog" onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
-              <MessageSquare className="w-4 h-4 text-indigo-500"/> Blog
-            </a>
-            <a id="mobile-nav-link-contact" href="/#contact" onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
-              <MessageSquare className="w-4 h-4 text-red-500"/> Contact
-            </a>
-            <a
-              id="mobile-nav-cta-button"
-              href="/#contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="inline-block text-center rounded-full bg-accent hover:bg-accent-hover text-black text-sm font-semibold px-5 py-3 hover:scale-[1.02] transition-all duration-200 mt-3 shadow-[0_0_15px_rgba(245,166,35,0.4)]"
-            >
-              Start Your Growth
-            </a>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="lg:hidden border-t border-black/5 bg-card absolute w-full left-0 shadow-xl shadow-black/10 z-50 overflow-hidden"
+          >
+            <div className="px-4 py-4 space-y-1 flex flex-col max-w-7xl mx-auto">
+              <a id="mobile-nav-link-home" href="/" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
+                <Home className="w-4 h-4 text-blue-500"/> Home
+              </a>
+              <a id="mobile-nav-link-services" href="/#services" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
+                <Briefcase className="w-4 h-4 text-orange-500"/> Services
+              </a>
+              <a id="mobile-nav-link-work" href="/#work" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
+                <FolderOpen className="w-4 h-4 text-purple-500"/> Work
+              </a>
+              <a id="mobile-nav-link-pricing" href="/#pricing" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
+                <Tag className="w-4 h-4 text-green-500"/> Pricing
+              </a>
+              <a id="mobile-nav-link-blog" href="/blog" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
+                <MessageSquare className="w-4 h-4 text-indigo-500"/> Blog
+              </a>
+              <a id="mobile-nav-link-contact" href="/#contact" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-link-blue transition-colors py-3 px-3 rounded-xl hover:bg-background">
+                <MessageSquare className="w-4 h-4 text-red-500"/> Contact
+              </a>
+              <a
+                id="mobile-nav-cta-button"
+                href="/#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="inline-block text-center rounded-full bg-accent hover:bg-accent-hover text-black text-sm font-semibold px-5 py-3 hover:scale-[1.02] transition-all duration-200 mt-3 shadow-[0_0_15px_rgba(245,166,35,0.4)]"
+              >
+                Start Your Growth
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

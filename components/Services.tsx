@@ -1,22 +1,39 @@
 'use client';
 
 import { Globe, MapPin, Megaphone, ArrowRight } from 'lucide-react';
-import { useInView } from '@/hooks/useInView';
+import { motion, Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 70, damping: 15 } 
+  }
+};
 
 export default function Services() {
-  const { ref, isInView } = useInView(0.1);
-
   return (
     <section id="services" className="py-16 sm:py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div
-          ref={ref}
-          className={`transition-all duration-700 transform ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="text-center mb-10 sm:mb-14">
+          <motion.div variants={itemVariants} className="text-center mb-10 sm:mb-14">
             <p className="text-sm tracking-[0.2em] text-link-blue font-medium uppercase mb-3">
               WHAT WE DO
             </p>
@@ -26,12 +43,12 @@ export default function Services() {
             <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto">
               Pick one or combine them. Everything below is a concrete, real deliverable — no vague promises.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
             
             {/* Card 1 - Website Development */}
-            <div className={`group bg-background rounded-2xl sm:rounded-3xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}>
+            <motion.div variants={itemVariants} className="group bg-background rounded-2xl sm:rounded-3xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
               {/* Animated visual area */}
               <div className="relative h-48 sm:h-56 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
                 {/* Floating browser mockup */}
@@ -76,10 +93,10 @@ export default function Services() {
                   Get Started <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 2 - Google Maps SEO */}
-            <div className={`group bg-background rounded-2xl sm:rounded-3xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${isInView ? 'animate-fade-in-up animate-delay-200' : 'opacity-0'}`}>
+            <motion.div variants={itemVariants} className="group bg-background rounded-2xl sm:rounded-3xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
               {/* Animated visual area */}
               <div className="relative h-48 sm:h-56 bg-gradient-to-br from-red-50 to-orange-50 overflow-hidden">
                 {/* Map mockup */}
@@ -132,10 +149,10 @@ export default function Services() {
                   Boost Visibility <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 3 - Meta & Google Ads */}
-            <div className={`group bg-background rounded-2xl sm:rounded-3xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${isInView ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}`}>
+            <motion.div variants={itemVariants} className="group bg-background rounded-2xl sm:rounded-3xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
               {/* Animated visual area */}
               <div className="relative h-48 sm:h-56 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden">
                 {/* Notification cards that animate */}
@@ -181,14 +198,14 @@ export default function Services() {
                   Launch Ads <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </div>
+            </motion.div>
 
           </div>
 
-          <p className="text-xs text-muted text-center mt-8 sm:mt-10 max-w-2xl mx-auto">
+          <motion.p variants={itemVariants} className="text-xs text-muted text-center mt-8 sm:mt-10 max-w-2xl mx-auto">
             Industry research shows that most consumers search online before visiting a local business. The services above are designed to capitalize on this consumer behavior.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         
       </div>
     </section>

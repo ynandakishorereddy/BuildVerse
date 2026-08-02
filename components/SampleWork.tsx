@@ -1,35 +1,52 @@
 'use client';
 
-import { useInView } from '@/hooks/useInView';
 import { ExternalLink } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 70, damping: 15 } 
+  }
+};
 
 export default function SampleWork() {
-  const { ref, isInView } = useInView(0.1);
-
   return (
     <section id="work" className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div
-          ref={ref}
-          className={`transition-all duration-700 transform ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
         >
-          <p className="text-sm tracking-[0.15em] text-link-blue font-medium uppercase mb-3">
+          <motion.p variants={itemVariants} className="text-sm tracking-[0.15em] text-link-blue font-medium uppercase mb-3">
             OUR PORTFOLIO
-          </p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+          </motion.p>
+          <motion.h2 variants={itemVariants} className="text-3xl lg:text-4xl font-bold text-primary mb-4">
             Real projects, real results.
-          </h2>
-          <p className="text-lg text-muted max-w-3xl mb-14">
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-lg text-muted max-w-3xl mb-14">
             Here are websites we&apos;ve built for real local businesses. Click to visit the live sites and see the quality for yourself.
-          </p>
+          </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             {/* Card 1 - Srirasthu Convention Hall (REAL) */}
-            <a href="https://srivasthu-convention-hall.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
+            <motion.a variants={itemVariants} whileHover={{ y: -5 }} href="https://srivasthu-convention-hall.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-black/5">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -61,10 +78,10 @@ export default function SampleWork() {
               <div className="text-sm text-link-blue font-semibold text-center py-4 border-t border-border/50 group-hover:bg-link-blue/5 transition-colors">
                 Visit Live Site →
               </div>
-            </a>
+            </motion.a>
 
             {/* Card 2 - The Empire Unisex Saloon (REAL) */}
-            <a href="https://the-empire-unisex-saloon.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
+            <motion.a variants={itemVariants} whileHover={{ y: -5 }} href="https://the-empire-unisex-saloon.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-black/5">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -96,10 +113,10 @@ export default function SampleWork() {
               <div className="text-sm text-link-blue font-semibold text-center py-4 border-t border-border/50 group-hover:bg-link-blue/5 transition-colors">
                 Visit Live Site →
               </div>
-            </a>
+            </motion.a>
 
             {/* Card 3 - SVS Consultants (REAL) */}
-            <a href="https://svs-consultancy.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
+            <motion.a variants={itemVariants} whileHover={{ y: -5 }} href="https://svs-consultancy.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-black/5">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -131,10 +148,10 @@ export default function SampleWork() {
               <div className="text-sm text-link-blue font-semibold text-center py-4 border-t border-border/50 group-hover:bg-link-blue/5 transition-colors">
                 Visit Live Site →
               </div>
-            </a>
+            </motion.a>
 
             {/* Card 4 - Concept placeholder */}
-            <div className="bg-card rounded-2xl overflow-hidden shadow-md border border-black/5 relative hover:shadow-xl transition-shadow">
+            <motion.div variants={itemVariants} whileHover={{ y: -5 }} className="bg-card rounded-2xl overflow-hidden shadow-md border border-black/5 relative hover:shadow-xl transition-shadow">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
@@ -159,10 +176,10 @@ export default function SampleWork() {
               <div className="text-sm text-muted font-medium text-center py-4 border-t border-border/50">
                 Your next project
               </div>
-            </div>
+            </motion.div>
 
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,20 +1,42 @@
 'use client';
 
 import Image from 'next/image';
-import { useInView } from '@/hooks/useInView';
 import { Target, Heart, TrendingUp } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 70, damping: 15 } 
+  }
+};
 
 export default function About() {
-  const { ref, isInView } = useInView(0.1);
-
   return (
     <section id="about" className="py-20 lg:py-28 bg-background border-t border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className={`transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left side: Text */}
-            <div>
+            <motion.div variants={itemVariants}>
               <p className="text-sm tracking-[0.2em] text-link-blue font-medium uppercase mb-4">ABOUT US</p>
               <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-sora">
                 We exist to help local businesses thrive online.
@@ -47,10 +69,10 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
             {/* Right side: Generated background image with mission overlay */}
-            <div className="relative">
+            <motion.div variants={itemVariants} className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-link-blue/20 rounded-3xl transform rotate-3 scale-105"></div>
               <div className="rounded-3xl overflow-hidden relative min-h-[400px]">
                 <Image
@@ -72,10 +94,10 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
