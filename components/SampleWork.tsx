@@ -26,7 +26,7 @@ export default function SampleWork() {
             Here are websites we&apos;ve built for real local businesses. Click to visit the live sites and see the quality for yourself.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             {/* Card 1 - Srirasthu Convention Hall (REAL) */}
             <a href="https://srivasthu-convention-hall.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
@@ -98,7 +98,42 @@ export default function SampleWork() {
               </div>
             </a>
 
-            {/* Card 3 - Concept placeholder */}
+            {/* Card 3 - SVS Consultants (REAL) */}
+            <a href="https://svs-consultancy.vercel.app/" target="_blank" rel="noopener noreferrer" className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-black/5 hover:-translate-y-1">
+              <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#EAB308]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#22C55E]"></div>
+                <div className="ml-3 flex-1 bg-[#334155] rounded-full px-3 py-1 text-xs text-[#94A3B8] truncate">
+                  svs-consultancy.vercel.app
+                </div>
+              </div>
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#1E3A8A] to-[#EA580C]"></div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs tracking-[0.15em] font-bold uppercase text-[#1E3A8A]">
+                    ✅ LIVE · TAX &amp; BUSINESS CONSULTANCY
+                  </p>
+                  <ExternalLink className="w-4 h-4 text-muted group-hover:text-link-blue transition-colors" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-2">SVS Consultants</h3>
+                <p className="text-sm text-muted mb-4">Professional Income Tax, GST, Audit, Accounts Maintenance &amp; Business Licensing firm in Hayathnagar, Telangana with online consultation booking.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-[#1E3A8A]/10 text-[#1E3A8A] px-2.5 py-1 rounded-full font-medium">Tax &amp; GST</span>
+                  <span className="text-xs bg-[#EA580C]/15 text-[#C2410C] px-2.5 py-1 rounded-full font-medium">Licensing</span>
+                  <span className="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium">SEO</span>
+                </div>
+                <div className="flex items-center gap-4 text-xs text-muted">
+                  <span>⭐ 10+ Years Trust</span>
+                  <span>📊 500+ Clients</span>
+                </div>
+              </div>
+              <div className="text-sm text-link-blue font-semibold text-center py-4 border-t border-border/50 group-hover:bg-link-blue/5 transition-colors">
+                Visit Live Site →
+              </div>
+            </a>
+
+            {/* Card 4 - Concept placeholder */}
             <div className="bg-card rounded-2xl overflow-hidden shadow-md border border-black/5 relative hover:shadow-xl transition-shadow">
               <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#EF4444]"></div>
